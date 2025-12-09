@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Gurren Drum Kit — JavaScript Drum Kit (TTGL Theme)</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="overlay"></div>
+  <header class="site-header">
+    <h1>Gurren Drum Kit</h1>
+    <p>Estilo: Tengen Toppa Gurren Lagann — Presiona A S D F G H J K L</p>
+  </header>
+
+  <main class="content">
+    <div class="keys" role="list">
+      <div data-key="65" class="key"><kbd>A</kbd><span>clap</span></div>
+      <div data-key="83" class="key"><kbd>S</kbd><span>hihat</span></div>
+      <div data-key="68" class="key"><kbd>D</kbd><span>kick</span></div>
+      <div data-key="70" class="key"><kbd>F</kbd><span>openhat</span></div>
+      <div data-key="71" class="key"><kbd>G</kbd><span>boom</span></div>
+      <div data-key="72" class="key"><kbd>H</kbd><span>ride</span></div>
+      <div data-key="74" class="key"><kbd>J</kbd><span>snare</span></div>
+      <div data-key="75" class="key"><kbd>K</kbd><span>tom</span></div>
+      <div data-key="76" class="key"><kbd>L</kbd><span>tink</span></div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>Proyecto basado en JavaScript30 — Tema inspirado en TTGL</p>
+  </footer>
+
+  
+  <audio data-key="65" src="sounds/TTGL1.wav"></audio>
+  <audio data-key="83" src="sounds/TTGL2.wav"></audio>
+  <audio data-key="68" src="sounds/TTGL3.wav"></audio>
+  <audio data-key="70" src="sounds/TTGL4.wav"></audio>
+  <audio data-key="71" src="sounds/TTGL5.wav"></audio>
+  <audio [data-key="72"] src="sounds/TTGL6.wav"></audio>
+  <audio data-key="74" src="sounds/TTGL7.wav"></audio>
+  <audio data-key="75" src="sounds/TTGL8.wav"></audio>
+  <audio data-key="76" src="sounds/TTGL9.wav"></audio>
+
+  <script src="script.js"></script>
+</body>
+</html>

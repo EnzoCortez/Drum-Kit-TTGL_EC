@@ -1,0 +1,140 @@
+/* TTGL-inspired theme for Drum Kit */
+:root{
+  --accent:#ff4500; /* fiery red/orange */
+  --accent-2:#ffc600; /* yellow */
+  --muted: rgba(255,255,255,0.85);
+}
+
+*{box-sizing:border-box}
+
+html,body{
+  height:100%;
+  margin:0;
+  font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  color:var(--muted);
+  background:#000;
+}
+
+body{
+  background-image: url('assets/TTGL_scaled.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  position:relative;
+  overflow:auto;
+}
+
+/* dark overlay for contrast */
+.overlay{
+  position:fixed;
+  inset:0;
+  background: linear-gradient(180deg, rgba(0,0,0,0.5) 10%, rgba(0,0,0,0.85) 70%);
+  pointer-events:none;
+}
+
+/* header */
+.site-header{
+  position:fixed;
+  left:20px;
+  top:20px;
+  z-index:20;
+  text-shadow: 0 4px 16px rgba(0,0,0,0.8);
+}
+
+.site-header h1{
+  margin:0;
+  font-size:28px;
+  letter-spacing:2px;
+  color:var(--accent-2);
+  text-transform:uppercase;
+  font-weight:700;
+  border-left:6px solid var(--accent);
+  padding-left:12px;
+}
+
+.site-header p{
+  margin:6px 0 0 0;
+  font-size:13px;
+  color:rgba(255,255,255,0.8);
+}
+
+/* main content centered */
+.content{
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:120px 20px 80px;
+  z-index:10;
+  position:relative;
+}
+
+/* keys layout */
+.keys{
+  display:flex;
+  gap:1rem;
+  flex-wrap:wrap;
+  justify-content:center;
+  max-width:1100px;
+  margin:0 auto;
+}
+
+/* key visual */
+.key{
+  --size:100px;
+  width:var(--size);
+  height:var(--size);
+  border-radius:8px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  background: linear-gradient(180deg, rgba(0,0,0,0.55), rgba(255,255,255,0.02));
+  border: 2px solid rgba(255,255,255,0.06);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.6), 0 0 10px rgba(255,140,0,0.02) inset;
+  transition: transform 120ms cubic-bezier(.2,.9,.3,1), box-shadow 120ms;
+  cursor:pointer;
+  color:var(--accent-2);
+  text-align:center;
+  user-select:none;
+}
+
+/* key label */
+.key kbd{
+  display:block;
+  font-size:26px;
+  font-weight:700;
+  letter-spacing:2px;
+}
+
+.key span{
+  display:block;
+  font-size:11px;
+  margin-top:6px;
+  text-transform:uppercase;
+  color:var(--accent);
+}
+
+/* playing effect */
+.key.playing{
+  transform: translateY(-8px) scale(1.08);
+  box-shadow: 0 12px 30px rgba(255,80,0,0.35), 0 0 36px rgba(255,200,0,0.08);
+  background: linear-gradient(180deg, rgba(255,60,0,0.9), rgba(255,160,0,0.95));
+  color:#111;
+}
+
+/* footer */
+.site-footer{
+  position:fixed;
+  right:20px;
+  bottom:14px;
+  font-size:13px;
+  color:rgba(255,255,255,0.7);
+  z-index:20;
+}
+
+/* small responsive tweak */
+@media (max-width:640px){
+  .key{--size:72px}
+  .site-header h1{font-size:20px}
+}
