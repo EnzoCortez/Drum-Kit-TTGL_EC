@@ -19,4 +19,4 @@ Reproduce sonidos al presionar teclas y aplica una estética inspirada en la ima
 Funciona desde GitHub Pages, Vercel o Netlify. Asegúrate de que la carpeta `assets/` y `sounds/` se publiquen.
 
 ## Autor
-Tu nombre completo
+Enzo Cortez
